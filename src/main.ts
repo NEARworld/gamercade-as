@@ -5,14 +5,8 @@ let frameCounter: usize = 0;
 let xPos: i32 = 0;
 let yPos: i32 = 0;
 
-function consoleLog(str: string): void {
-  // const ptr = changetype<usize>(str);
-  // const byteLength = load<u32>(ptr - 4);
-  // gc.consoleLog(ptr, byteLength);
-}
-
 export function init(): void {
-  consoleLog("Hello, from Assemblyscript!");
+  gc.consoleLog("Hello, from Assemblyscript!");
 }
 export function update(): void {}
 export function draw(): void {

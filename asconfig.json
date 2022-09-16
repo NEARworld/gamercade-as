@@ -5,7 +5,8 @@
       "outFile": "build/debug.wasm",
       "textFile": "build/debug.wat",
       "sourceMap": true,
-      "debug": true
+      "debug": true,
+      "use": "abort=gamercade/gamercade-raw/abortHandler"
     },
     "release": {
       "outFile": "build/release.wasm",
