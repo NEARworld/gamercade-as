@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@assemblyscript/loader": "^0.21.3",
+    "serve": "^14.0.1"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.21.3"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
+  "scripts": {
+    "asbuild:debug": "asc src/main.ts --target debug",
+    "asbuild:release": "asc src/main.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "test": "node tests",
+    "start": "npx serve ."
+  }
+}
