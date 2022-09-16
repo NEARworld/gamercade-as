@@ -121,7 +121,7 @@ export declare function sprite(graphics_parameters: i32, transparency_mask: i64,
 // @ts-ignore: decorator// @ts-ignore: decorator
 
 @external("env", "console_log")
-export declare function consoleLog(text_ptr: usize, len: usize): void;
+export declare function console_log(text_ptr: usize, len: usize): void;
 
 // Random
 // @ts-ignore: decorator
@@ -314,3 +314,14 @@ export declare function isLocalPlayer(player_id: i32): i32;
 // @ts-ignore: decorator
 @external("env", "is_remote_player")
 export declare function isRemotePlayer(player_id: i32): i32;
+
+function abortHandler (message: string | null, fileName: string | null, lineNumber: u32, columnNumber: u32) :void {
+    consoleLog(message!);
+}
+
+export function consoleLog(str: string): void {
+    const buffer = String.UTF8.encode(str);
+    const ptr = changetype<usize>(buffer);
+    const byteLength = load<u32>(ptr - 4);
+    console_log(ptr, byteLength);
+}
