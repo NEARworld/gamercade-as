@@ -304,6 +304,68 @@ export declare function triggerRight(player_id: i32): f32;
 @external("env", "raw_input_state")
 export declare function rawInputState(played_id: i32): i64;
 
+// Mouse Input
+// @ts-ignore: decorator
+@external("env", "mouse_left_pressed")
+export declare function mouseLeftPressed(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_left_released")
+export declare function mouseLeftReleased(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_left_held")
+export declare function mouseLeftHeld(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_right_pressed")
+export declare function mouseRightPressed(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_right_released")
+export declare function mouseRightReleased(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_right_held")
+export declare function mouseRightHeld(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_middle_pressed")
+export declare function mouseMiddlePressed(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_middle_released")
+export declare function mouseMiddleReleased(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_middle_held")
+export declare function mouseMiddleHeld(player_id: i32):i32
+
+// @ts-ignore: decorator
+@external("env", "mouse_x_pos")
+export declare function mouseXPos(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_y_pos")
+export declare function mouseYPos(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_x_delta")
+export declare function mouseXDelta(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_y_delta")
+export declare function mouseYDelta(player_id: i32): i32;
+
+// @ts-ignore: decorator
+@external("env", "mouse_wheel_up")
+export declare function mouseWheelUp(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_wheel_down")
+export declare function mouseWheelDown(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_wheel_left")
+export declare function mouseWheelLeft(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "mouse_wheel_right")
+export declare function mouseWheelRight(player_id: i32): i32;
+// @ts-ignore: decorator
+@external("env", "lock_mouse")
+export declare function lockMouse(locked: i32): void;
+
+// @ts-ignore: decorator
+@external("env", "raw_mouse_state")
+export declare function rawMouseState(player_id: i32): i64;
+
 // Multiplayer
 // @ts-ignore: decorator
 @external("env", "num_players")
